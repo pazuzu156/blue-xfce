@@ -1,0 +1,152 @@
+diff -crB src/gtk-2.0/gtkrc ../numix-blue/src/gtk-2.0/gtkrc
+*** src/gtk-2.0/gtkrc	2016-11-14 17:22:29.000000000 -0500
+--- ../numix-blue/src/gtk-2.0/gtkrc	2017-06-01 18:19:35.911862000 -0400
+***************
+*** 1,6 ****
+  # Numix GTK Theme
+  
+! gtk-color-scheme = "bg_color:#eeeeee\nfg_color:#555555\nbase_color:#ffffff\ntext_color:#333333\nselected_bg_color:#f0544c\nselected_fg_color:#ffffff\ntooltip_bg_color:#444444\ntooltip_fg_color:#eeeeee\ntitlebar_bg_color:#444444\ntitlebar_fg_color:#dddddd\nmenubar_bg_color:#444444\nmenubar_fg_color:#dddddd\ntoolbar_bg_color:#eeeeee\ntoolbar_fg_color:#555555\nmenu_bg_color:#444444\nmenu_fg_color:#dddddd\npanel_bg_color:#444444\npanel_fg_color:#dddddd\nlink_color:#f06860"
+  
+  # Default Style
+  
+--- 1,6 ----
+  # Numix GTK Theme
+  
+! gtk-color-scheme = "bg_color:#22323A\nfg_color:#dcdcdc\nbase_color:#22323A\ntext_color:#dcdcdc\nselected_bg_color:#1568A4\nselected_fg_color:#f9f9f9\ntooltip_bg_color:#1B2B34\ntooltip_fg_color:#dedede\ntitlebar_bg_color:#1B2B34\ntitlebar_fg_color:#dcdcdc\nmenubar_bg_color:#1B2B34\nmenubar_fg_color:#dcdcdc\ntoolbar_bg_color:#22323A\ntoolbar_fg_color:#dcdcdc\nmenu_bg_color:#1B2B34\nmenu_fg_color:#dcdcdc\npanel_bg_color:#1B2B34\npanel_fg_color:#dcdcdc\nlink_color:#1568A4"
+  
+  # Default Style
+  
+diff -crB src/gtk-3.0/gtk.css ../numix-blue/src/gtk-3.0/gtk.css
+*** src/gtk-3.0/gtk.css	2016-11-14 17:22:29.000000000 -0500
+--- ../numix-blue/src/gtk-3.0/gtk.css	2016-11-14 17:22:29.000000000 -0500
+***************
+*** 1 ****
+! @import url("resource:///org/numixproject/gtk/dist/gtk.css");
+--- 1 ----
+! @import url("resource:///org/numixproject/gtk/dist/gtk-dark.css");
+diff -crB src/gtk-3.0/scss/_global.scss ../numix-blue/src/gtk-3.0/scss/_global.scss
+*** src/gtk-3.0/scss/_global.scss	2016-11-14 17:22:29.000000000 -0500
+--- ../numix-blue/src/gtk-3.0/scss/_global.scss	2017-06-01 18:48:27.246801000 -0400
+***************
+*** 3,20 ****
+  @import "functions";
+  
+  // default color scheme
+! $bg_color: if($variant == "dark", #444, #eee);
+! $fg_color: if($variant == "dark", #ddd, #555);
+  $base_color: if($variant == "dark", #333, #fff);
+! $text_color: if($variant == "dark", #eee, #333);
+! $selected_bg_color: #f0544c;
+! $selected_fg_color: #fff;
+! $tooltip_bg_color: #444;
+! $tooltip_fg_color: #eee;
+  
+  // dark colors
+! $dark_bg_color: #444;
+! $dark_fg_color: #eee;
+  
+  // shadows
+  $dark_shadow: #000;
+--- 3,20 ----
+  @import "functions";
+  
+  // default color scheme
+! $bg_color: if($variant == "dark", #333, #eee);
+! $fg_color: if($variant == "dark", #dcdcdc, #555);
+  $base_color: if($variant == "dark", #333, #fff);
+! $text_color: if($variant == "dark", #dcdcdc, #333);
+! $selected_bg_color: #1268A4;
+! $selected_fg_color: #f9f9f9;
+! $tooltip_bg_color: #2d2d2d;
+! $tooltip_fg_color: #dedede;
+  
+  // dark colors
+! $dark_bg_color: #333;
+! $dark_fg_color: #dcdcdc;
+  
+  // shadows
+  $dark_shadow: #000;
+diff -crB src/gtk-3.20/gtk.css ../numix-blue/src/gtk-3.20/gtk.css
+*** src/gtk-3.20/gtk.css	2016-11-14 17:22:29.000000000 -0500
+--- ../numix-blue/src/gtk-3.20/gtk.css	2016-11-14 17:22:29.000000000 -0500
+***************
+*** 1 ****
+! @import url("resource:///org/numixproject/gtk-3.20/dist/gtk.css");
+--- 1 ----
+! @import url("resource:///org/numixproject/gtk-3.20/dist/gtk-dark.css");
+diff -crB src/gtk-3.20/scss/_global.scss ../numix-blue/src/gtk-3.20/scss/_global.scss
+*** src/gtk-3.20/scss/_global.scss	2016-11-14 17:22:29.000000000 -0500
+--- ../numix-blue/src/gtk-3.20/scss/_global.scss	2017-06-01 18:27:19.413057000 -0400
+***************
+*** 3,24 ****
+  @import "functions";
+  
+  // default color scheme
+! $bg_color: if($variant == "dark", #444, #eee);
+! $fg_color: if($variant == "dark", #ddd, #555);
+  $base_color: if($variant == "dark", #333, #fff);
+! $text_color: if($variant == "dark", #eee, #333);
+! $selected_bg_color: #f0544c;
+! $selected_fg_color: #fff;
+! $tooltip_bg_color: #444;
+! $tooltip_fg_color: #eee;
+  
+  $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
+  $borders_color: if($variant == 'light', shade($bg_color, .85), shade($bg_color, .88));
+  $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
+  
+  // dark colors
+! $dark_bg_color: #444;
+! $dark_fg_color: #eee;
+  
+  // shadows
+  $dark_shadow: #000;
+--- 3,24 ----
+  @import "functions";
+  
+  // default color scheme
+! $bg_color: if($variant == "dark", #333, #eee);
+! $fg_color: if($variant == "dark", #dcdcdc, #555);
+  $base_color: if($variant == "dark", #333, #fff);
+! $text_color: if($variant == "dark", #dcdcdc, #333);
+! $selected_bg_color: #1268A4;
+! $selected_fg_color: #f9f9f9;
+! $tooltip_bg_color: #2d2d2d;
+! $tooltip_fg_color: #dedede;
+  
+  $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
+  $borders_color: if($variant == 'light', shade($bg_color, .85), shade($bg_color, .88));
+  $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
+  
+  // dark colors
+! $dark_bg_color: #22323A;
+! $dark_fg_color: #dcdcdc;
+  
+  // shadows
+  $dark_shadow: #000;
+diff -crB src/index.theme ../numix-blue/src/index.theme
+*** src/index.theme	2016-11-14 17:22:29.000000000 -0500
+--- ../numix-blue/src/index.theme	2017-06-01 19:30:19.653943443 -0400
+***************
+*** 1,10 ****
+  [Desktop Entry]
+  Type=X-GNOME-Metatheme
+! Name=Numix
+! Comment=A modern flat theme
+  Encoding=UTF-8
+  
+  [X-GNOME-Metatheme]
+! GtkTheme=Numix
+! MetacityTheme=Numix
+  ButtonLayout=:minimize,maximize,close
+--- 1,10 ----
+  [Desktop Entry]
+  Type=X-GNOME-Metatheme
+! Name=Numix-Blue
+! Comment=A modern flat theme (Blue variant)
+  Encoding=UTF-8
+  
+  [X-GNOME-Metatheme]
+! GtkTheme=Numix-Blue
+! MetacityTheme=Numix-Blue
+  ButtonLayout=:minimize,maximize,close

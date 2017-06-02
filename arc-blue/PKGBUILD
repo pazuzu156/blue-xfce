@@ -1,0 +1,32 @@
+# Maintainer: Kaleb Klein <klein.jae@gmail.com>
+
+pkgname=arc-blue-firefox-theme
+pkgver=1.0
+pkgrel=1
+pkgdesc='A blue styled Arc theme for Firefox'
+arch=('any')
+url='https://github.com/horst3180/arc-firefox-theme'
+license=('Mozilla')
+makedepends=('git')
+source=('git://github.com/horst3180/arc-firefox-theme.git'
+        'arc-blue.patch')
+md5sums=('SKIP'
+         '7c09c39ef8e4018b774a9973e923a6af')
+
+prepare() {
+  cd "$srcdir/arc-firefox-theme/arc-firefox-theme"
+
+  patch -Np1 -i "$srcdir/arc-blue.patch"
+}
+
+build() {
+  cd "$srcdir/arc-firefox-theme"
+  ./autogen.sh --disable-light --disable-darker --prefix=${pkgdir}/usr
+}
+
+package() {
+  cd "$srcdir/arc-firefox-theme"
+  make install
+}
+
+# vim: ts=2 sw=2 et:
