@@ -1,7 +1,7 @@
 # Xfce Blue
 This repo is just a collection is install scripts and patches. Since none of the themes/configs are completely mine, they are all pulled from the upstream and patched with my changes.
 
-## Items Uses
+## Items Used
 I use a few different items to put the blue into my Xfce config.
 
 Arc Firefox Theme - This is the Arc theme for Firefox, only more blue ;)  
