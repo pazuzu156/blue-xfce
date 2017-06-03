@@ -16,7 +16,7 @@ optdepends=('gtk-engine-murrine: GTK2 theme engine')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/numixproject/numix-gtk-theme/archive/${pkgver}.tar.gz"
         'numix-blue.patch')
 md5sums=('7533cdecb2e9f875cd7efc881b8d65a3'
-         'be82421a737ca2661ef75f38665104b5')
+         '29a91b22ae30c0f58040354254fa0ce0')
 
 prepare() {
   cd "$srcdir/numix-gtk-theme-$pkgver/src/"
