@@ -16,5 +16,8 @@ conky-blue is installed using the `setup.sh` script. Simply run it. It'll downlo
 
 dots-blue is just a bunch of images. Unpack it `tar -xf dots-blue.tgz` and copy the `Dots Blue` folder inside of the extracted folder into `/usr/share/themes`
 
+### Install Side Note
+The Conky config requires the jq package to be installed for weather icons and such. Make sure it's installed! ;)
+
 ## Fonts
 I use a mixture of fonts. First, I use `ttf-dejavu` which can be found in the arch repos. I also use the `Quicksand` font (which I think is nice). Since this isn't in the repos, you can get it from Google Fonts here: https://fonts.google.com/specimen/Quicksand

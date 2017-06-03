@@ -7,7 +7,7 @@ pkgdesc='A blue styled Arc theme for Firefox'
 arch=('any')
 url='https://github.com/horst3180/arc-firefox-theme'
 license=('Mozilla')
-makedepends=('git')
+makedepends=('git' 'zip' 'unzip')
 source=('git://github.com/horst3180/arc-firefox-theme.git'
         'arc-blue.patch')
 md5sums=('SKIP'
