@@ -1,8 +1,6 @@
 # Maintainer: Kaleb Klein <klein.jae@gmail.com>
 
-# Based on numix-themes-git
-# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
-# Contributor: Diego <cdprincipe@gmail.com>
+# Based on numix-themes-dark
 
 pkgname=numix-themes-blue
 pkgver=2.6.6
@@ -24,11 +22,6 @@ prepare() {
   patch -Np1 -i "$srcdir/numix-blue.patch"
   ln -srf gtk-3.0/gtk{-dark,}.css
   ln -srf gtk-3.20/gtk{-dark,}.css
-}
-
-build() {
-  cd "$srcdir/numix-gtk-theme-$pkgver/"
-  make
 }
 
 package() {
